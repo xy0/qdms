@@ -1,0 +1,323 @@
+/*
+* Site-Specific Layout and General Stylesheet
+* 
+* by Clayton Shannon cyroxos@cylab.info
+*
+* in QDMS, this file just customizes the wrapper 
+* part of the page (header and footer)
+*
+*/
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+body{
+	background-color: #232323;
+	//background-image: url("../img/bg.jpg");
+}
+
+header {
+	width: 100%;
+	height: 230px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	text-align:center;
+	background-color: #373737;
+}
+header a{
+	text-decoration:none;
+}
+header a:visited{
+	color:#b6c6d3;
+}
+header a:hover{
+	color:#FFF;
+}
+header img{
+	z-index: 1000;
+	margin-top:6px;
+	width:500px;
+}
+header .headImg{
+	position:fixed;
+	top:-60px;
+}
+
+header nav{
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	position: absolute;
+}
+header nav > a {
+	display: none;
+}
+header nav li {
+	position: relative;
+}
+	header nav li a {
+		color: #fff;
+		display: block;
+	}
+		header nav li a:active {
+			background-color: #2C2C2C !important;
+		}
+header nav span:after{
+	width: 0;
+	height: 0;
+	border: 0.313em solid transparent; /* 5 */
+	border-bottom: none;
+	border-top-color: #373737; /* dropdown arrow */
+	content: '';
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	right: -0.313em; /* 5 */
+}
+header nav > ul { /* first level */
+	height: 3em; /* 60 */
+	background-color: #2C2C2C;
+	margin-left: -20px;
+}
+	header nav > ul > li {
+		width: 16%;
+		height: 100%;
+		float: left;
+	}
+		header nav > ul > li > a {
+			height: 100%;
+			font-size: 1.25em;
+			line-height: 2.5em; 
+			text-align: center;
+		}
+		header.smaller nav > ul > li > a {
+			padding-top:5px;
+		}
+			header nav > ul > li:not( :last-child ) > a {
+				border-right: 1px solid #373737;
+			}
+			header nav > ul > li:hover > a,
+			header nav > ul:not( :hover ) > li.active > a {
+				background-color: #373737;
+			}
+header nav li ul { /* second level */
+	background-color: #373737;
+	display: none;
+	position: absolute;
+	top: 100%;
+	/*padding:10px; */
+}
+	header nav li:hover ul {
+		display: block;
+		position: relative;
+		margin:0px;
+		width:100%;
+		right:0;
+		top:0;
+	}
+		header nav li:not( :first-child ):hover ul {
+			left: 0px;
+		}
+		header nav li ul a {
+			font-size: 1.25em; /* 20 */
+			/*border-top: 1px solid #6e98ba; */
+			padding: 0.5em; /* 15 (20) */
+		}
+			header nav li ul li a:hover,
+			header nav li ul:not( :hover ) li.active a {
+				background-color: #434343;
+			}
+header.smaller {
+	height: 73px;
+	text-align: left;
+}
+header.smaller img {
+    height:140px;
+    width:auto;
+    margin-top:-75px;
+    margin-left:10px;
+}
+header.smaller h1#logo {
+	width: 150px;
+	height: 75px;
+	line-height: 75px;
+	font-size: 30px; 
+}
+header.smaller nav a {
+      line-height: 75px; 
+}
+
+/* Extra */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0; 
+}
+
+.container{
+	margin-top:285px;
+	background-color: white;
+	-webkit-box-shadow: 4px 4px 15px 0px rgba(50, 50, 50, 0.81);
+	-moz-box-shadow:    4px 4px 15px 0px rgba(50, 50, 50, 0.81);
+	box-shadow:         4px 4px 15px 0px rgba(50, 50, 50, 0.81);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Nav */
+	@media only screen and ( max-width: 62.5em ) { /* 1000 */
+		nav
+		{
+			width: 100%;
+			position: static;
+			margin: 0;
+		}
+	}
+
+	@media only screen and ( max-width: 40em ) { /* 640 */
+		html {
+			font-size: 75%; /* 12 */
+		}
+		header nav {
+			position: relative;
+			top: auto;
+			left: auto;
+		}
+			header nav > a {
+				width: 3.125em; /* 50 */
+				height: 3.125em; /* 50 */
+				text-align: left;
+				text-indent: -9999px;
+				background-color: #e15a1f;
+				position: relative;
+			}
+				header nav > a:before,
+				header nav > a:after {
+					position: absolute;
+					border: 2px solid #fff;
+					top: 35%;
+					left: 25%;
+					right: 25%;
+					content: '';
+				}
+				header nav > a:after {
+					top: 60%;
+				}
+
+			header nav:not( :target ) > a:first-of-type,
+			header nav:target > a:last-of-type {
+				display: block;
+			}
+
+		/* first level */
+		header nav > ul {
+			height: auto;
+			width:100%;
+			margin-left: 0;
+			display: none;
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+			header nav:target > ul {
+				display: block;
+			}
+			header nav > ul > li {
+				width: 100%;
+				float: none;
+			}
+				header nav > ul > li > a {
+					height: auto;
+					text-align: left;
+					padding: 0 0.833em; /* 20 (24) */
+				}
+					header nav > ul > li:not( :last-child ) > a {
+						border-right: none;
+						border-bottom: 1px solid #cc470d;
+					}
+
+			/* second level */
+			header nav li ul {
+				position: static;
+				padding: 1.25em; /* 20 */
+				padding-top: 0;
+			}
+	}
+
+	/* Smaller than 1111 (devices and browsers) */
+	@media only screen and (max-width: 1240px) {
+		header .headImg{
+			display:none;
+		}
+	}
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 500px) {
+		header img{
+			width:100%;
+		}
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+	@media all and (max-width: 660px) {}	
+
+	header.smaller {
+		height: 75px; 
+	}
+	header.smaller h1#logo {
+		height: 40px;
+		line-height: 40px;
+		font-size: 30px; 
+	}
+	header.smaller nav {
+		height: 35px; 
+	}
+	header.smaller nav a {
+		line-height: 35px; 
+	}
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/

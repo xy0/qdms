@@ -1,0 +1,6 @@
+<p>title{([ <strong>Welcome</strong>! ])} <br /> content{([</p>
+<h4>Thanks for taking a look at this project.</h4>
+<h4>It is currently in an Alpha phase and I will release more later.</h4>
+<h4>For more info, email me at <em><a href="mailto:please@helpme.vodka">please@helpme.vodka</a></em></h4>
+<p>&nbsp;</p>
+<h5><a href="h/">Also, the help section</a>])} tags{([ welcome,readme,hello,world ])}</h5>

@@ -1,0 +1,95 @@
+<h3>/a/ Administration, Application, Authorized, Alpha</h3>
+<h4>_player</h4>
+<h5>The default audio/video player library (currently open-source MediaElement.js)</h5>
+<h4>_pure</h4>
+<h5>HTML Purifier provides input filtering for security and cross-compatibility</h5>
+<h4>_scroll</h4>
+<h5>Scroller is a js library that allows for normal scroll-wheel input to affect many things including page navigation (eg: sideways scrolling, spinning etc)</h5>
+<h4>_uploader</h4>
+<h5>This library provides file and folder upload support. Currently Plupload, this may be replaced by Dropzone.js</h5>
+<h4>deleted</h4>
+<h5>This is where anything that is deleted within the CMS goes. Everything in here must be deleted<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; manually (outside of the CMS) for security reasons.</h5>
+<h4>_CONTENT.txt</h4>
+<h5>This is the default page content when not overridden by a custom index file or a specific displayer. This can be edited within the CMS.</h5>
+<h4>_hidden.log</h4>
+<h5>The presence of this file causes the CMS to password protect the directory. It contains a list of<br />hashed usernames that are allowed to view the directory.</h5>
+<h4>_hit.log</h4>
+<h5>A unique list of ip addresses that have viewed the directory.</h5>
+<h4>_index.php</h4>
+<h5>When a new directory is created or converted, this file is copied into it and provides linking to<br />the main CMS includes (_i1.php and _i2.php). This file can be edited to customize the default page. see index.php</h5>
+<h4>config.php</h4>
+<h5>Configurations including Database, Permissions, and Plugins<br />functions.php. Provides functions, classes, and runs the Initialization</h5>
+<h4>index.php</h4>
+<h5>This is the page-specific index file (a copy of _index.php) and can be edited. <br />%% more to be added later once rules are defined</h5>
+<h4>mcrypt.js</h4>
+<h5>This is part of the encryption library.</h5>
+<h4>monitor.php</h4>
+<h5>Unfinished. This file can be used to stream CMS events for the purpose of real-time monitoring</h5>
+<h4>p.php</h4>
+<h5>This file include prints the command textbox, or can be used to send commands via URL<br />&nbsp;&nbsp;&nbsp; %% add usage rules later</h5>
+<h4>rijndael.js</h4>
+<h5>Another part of the encryption library.</h5>
+<h4>style.css</h4>
+<h5>This is the default CMS stylesheet. This may be eliminated later, but for now is copied into every new or converted directory.</h5>
+<h3>/b/ Random</h3>
+<h5>This is a throwback to the /b/ random imageboard being a dumping ground and general cache or sandbox. This essentially can become a guestbook (open for anyone to post, but no-one can do very much and content is pruned after a time period).</h5>
+<h3>/css/ Style Sheets</h3>
+<h4>base.css</h4>
+<h5>This is part of the Skeleton Grid system used to provide fluid layouts.</h5>
+<h4>layout.css</h4>
+<h5>Also part of the Skeleton Grid system, this is a customized sheet that includes the menu, footer, header, and reactive styles.</h5>
+<h4>skeleton.css</h4>
+<h5>another part of the Skeleton Grid system, used to define words.</h5>
+<h3>/h/ Help and Support, Code Source and Comments</h3>
+<h5>This document will eventually be part of this folder.</h5>
+<h3>/img/ Default Images</h3>
+<h5>Default thumbnails, icons, header, and background images are stored in this folder.</h5>
+<h3>/js/ Java Script Libraries</h3>
+<h5>This contains the default javascripts needed to the CMS to run. It is different from /lib/ because these are single files and usually loaded on every page.</h5>
+<h4>animations.js</h4>
+<h5>part of the parallax plugin Jarralax.</h5>
+<h4>classie.js</h4>
+<h5>used to load new styles dynamically (for reactive designs)</h5>
+<h4>doubletaptogo.js</h4>
+<h5>used to mobile support</h5>
+<h4>jarrallax</h4>
+<h5>paralax zooming library</h5>
+<h4>spiderWebs.js</h4>
+<h5>used to create that cool moving background effect.</h5>
+<h3>/lib/ Libraries (larger JS packages)</h3>
+<h4>Expanding Textareas</h4>
+<h5>makes boxes bigger as you type. Also it seems to prevent bots from posting.</h5>
+<h4>Skroller</h4>
+<h5>Scroller is a js library that allows for normal scroll-wheel input to affect many things including page navigation (eg: sideways scrolling, spinning etc)</h5>
+<h4>tinymce</h4>
+<h5>WYSIWYG text editor / formatter.</h5>
+<h3>/u/ Users</h3>
+<h5>When you sign up to create an account, a user folder will be generated.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %% more on this later as I create it</h5>
+<h4>!above.php</h4>
+<h5>This file should be the first thing loaded on pages where presentation matters. It will generate a HTML compliant &lt;HEAD&gt; and load the appropriate javascripts. It will print the header, the menu, and the login container.</h5>
+<h4>!below.php</h4>
+<h5>This is the footer. It makes for nice standards-compliant HTML too.</h5>
+<h4>_404_index.php</h4>
+<h5>404 Not found page to be displayed (requires HTACCESS to be setup)</h5>
+<h4>_article_index.php</h4>
+<h5>This may be joined with _blog_index.php because they essencially do the same thing, except that _article_index.php only works with the current-directory _CONTENT.txt</h5>
+<h4>_blog_index.php</h4>
+<h5>This will display a list of formated _CONTENT.txt files when included.</h5>
+<h4>_CONTENT.txt</h4>
+<h5>This is the default page content when not overridden by a custom index file or a specific displayer. This can be edited within the CMS.</h5>
+<h4>_file_index.php</h4>
+<h5>Lists files and folders in current directory, excludes files that start with &ldquo;_&rdquo; or &ldquo;!&rdquo; and other system or CMS files. This include also allows for editing, renaming, and soon to be previewing files.</h5>
+<h4>_hit.log</h4>
+<h5>A unique list of ip addresses that have viewed the directory.</h5>
+<h4>_i1.php</h4>
+<h5>This is the first half of the CMS, it does most of the processing and stuff.</h5>
+<h4>_i2.php</h4>
+<h5>The second half, it displays things. These two files should be both included on every page that you want the CMS to run on.</h5>
+<h4>_image_index.php</h4>
+<h5>Displays image thumbnails of current directory. Will list pages if too many images are found.</h5>
+<h4>_index.php</h4>
+<h5>this is an example of a customized CMS index include.</h5>
+<h4>_login_index.php</h4>
+<h5>Login widget.</h5>
+<h4>_logs_index.php</h4>
+<h5>displays recent activity.</h5>

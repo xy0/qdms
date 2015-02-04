@@ -1,0 +1,3 @@
+title{([~CCMS QueryDisplay Alpha])} align{([left])} content{([ This is the root directory, and this is the default text to display.
+<b>Alpha Release, Readme Coming Soon.</b>
+ ])} tags{([  root, first, genisis  ])}
